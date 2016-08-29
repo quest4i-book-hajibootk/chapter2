@@ -1,8 +1,8 @@
 package com.example;
 
-import com.example.com.example.app.Argument;
-import com.example.com.example.app.ArgumentResolver;
-import com.example.com.example.app.Calculator;
+import com.example.app.Argument;
+import com.example.app.ArgumentResolver;
+import com.example.app.Calculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,7 +25,7 @@ public class HajibootDiApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("Enter 2 numbers like 'a b' : ");
 		Argument argument = argumentResolver.resolve(System.in);
-		int result = calculator.calc(argument.getA(), argument.getB());
+		int result = calculator.calc(argument);
 		System.out.println("result = " + result);
 	}
 

@@ -1,4 +1,4 @@
-package com.example.com.example.app;
+package com.example.app;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class AddCalculator implements Calculator {
 
     @Override
-    public int calc(int a, int b) {
-        return a + b;
+    public int calc(Argument argument) {
+        return argument.getA() + argument.getB();
     }
 }
